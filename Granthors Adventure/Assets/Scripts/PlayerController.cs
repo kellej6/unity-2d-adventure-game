@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
-    public Rigidbody2D rigidbody;
+    public new Rigidbody2D rigidbody;
     public Animator animator;
+
+    float moveSpeed = 5.0f;
+
+    float attackTime = 0.25f;
+    float attackCounter = 0.15f;
+    bool isAttacking;
 
     Vector2 movement;
 
@@ -22,9 +27,33 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        animator.SetFloat("HorizontalMove", movement.x);
+        animator.SetFloat("VerticalMove", movement.y);
+        animator.SetFloat("MoveSpeed", movement.sqrMagnitude);
+
+        if (movement.x == -1 || movement.x == 1 || movement.y == -1 || movement.y == 1)
+        {
+            animator.SetFloat("HorizontalFace", movement.x);
+            animator.SetFloat("VerticalFace", movement.y);
+        }
+
+        if (isAttacking)
+        {
+            rigidbody.velocity = Vector2.zero;
+
+            attackCounter -= Time.deltaTime;
+            if (attackCounter <= 0)
+            {
+                animator.SetBool("IsAttacking", isAttacking = false);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            attackCounter = attackTime;
+            animator.SetBool("IsAttacking", isAttacking = true);
+        }
+
     }
 
     // FixedUpdate is called once per frame at a fixed rate (50 frames/sec)
