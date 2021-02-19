@@ -282,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5342803, y: 1.490001, z: -10}
+  m_LocalPosition: {x: 15.651453, y: 1.490001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7130,7 +7130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094829368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.53, y: 1.49, z: -10}
+  m_LocalPosition: {x: 10.65, y: 1.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1984362434}
@@ -7160,6 +7160,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3303774815464195189, guid: 042d09c1f3081894b945a9e129f74121, type: 3}
   m_PrefabInstance: {fileID: 3303774814519200272}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223462502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223462501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cea8536b413ed4f8fa0a6eb3a68b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1971268214}
+  arrowRightPrefab: {fileID: 7043774874917757226, guid: 5eec417c405a70549924e8497949ab6c, type: 3}
+  arrowLeftPrefab: {fileID: 5996647355806432849, guid: 9e1148ab26890ae45b1c44baa3e0290b, type: 3}
 --- !u!4 &1223462504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3303774815464195192, guid: 042d09c1f3081894b945a9e129f74121, type: 3}
@@ -7184,21 +7199,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1223462507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223462501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a04f1f51ebc53b64b9ae857133f3ccc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  arrowSpawn: {fileID: 1971268214}
-  arrowPrefab: {fileID: 5965595461654153097, guid: bcba73f3b63757445b12f08ff9c201fa, type: 3}
 --- !u!1 &1278663304
 GameObject:
   m_ObjectHideFlags: 0
@@ -11061,7 +11061,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ef8579e0911a42c4b89aefa1af110b5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -50678,7 +50678,7 @@ GameObject:
   - component: {fileID: 1766964293}
   - component: {fileID: 1766964292}
   - component: {fileID: 1766964294}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54104,7 +54104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1971268214}
-  - component: {fileID: 1971268215}
   m_Layer: 0
   m_Name: Arrow Spawn
   m_TagString: Untagged
@@ -54120,25 +54119,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971268213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0.25, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1223462504}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1971268215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971268213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 391d1450bab2fe04a8bfb6f8550a3827, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 5965595461654153097, guid: bcba73f3b63757445b12f08ff9c201fa, type: 3}
 --- !u!1 &1984362433
 GameObject:
   m_ObjectHideFlags: 3
@@ -54297,6 +54283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3303774815464195189, guid: 042d09c1f3081894b945a9e129f74121, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3303774815464195190, guid: 042d09c1f3081894b945a9e129f74121, type: 3}
       propertyPath: arrow
       value: 
@@ -54335,7 +54325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3303774815464195192, guid: 042d09c1f3081894b945a9e129f74121, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.53
+      value: 10.65
       objectReference: {fileID: 0}
     - target: {fileID: 3303774815464195192, guid: 042d09c1f3081894b945a9e129f74121, type: 3}
       propertyPath: m_LocalPosition.y

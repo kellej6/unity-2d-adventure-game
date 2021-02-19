@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     float attackCounter = 0.15f;
     bool isAttacking;
 
-    Vector2 movement;
+   public Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
@@ -48,12 +48,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetButtonDown("Fire1"))
         {
             attackCounter = attackTime;
             animator.SetBool("IsAttacking", isAttacking = true);
         }
-
     }
 
     // FixedUpdate is called once per frame at a fixed rate (50 frames/sec)
